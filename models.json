@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:49:06Z",
+  "updated_at": "2026-01-08T01:50:40Z",
   "models": [
     {
       "id": "CGWM",
@@ -52,6 +52,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-21"
+    },
+    {
+      "id": "Fly By Wire",
+      "name": "Fly By Wire",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Fly By Wire",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 12343535,
+          "sha256": "72ea56c380e094e2288523a7c936588262d87561f0aa6f8dcc3efb52a4a7f2cf"
+        },
+        "driving_vision.onnx": {
+          "size": 34708248,
+          "sha256": "68f5e41678767240af478ebfca37a0adca18b2191f94a7cbe47304cb9fd2c70d"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-08"
     },
     {
       "id": "MacroStiff",
@@ -242,5 +259,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "9EIF0FrgSwVJ1vw5gF+tCzCS5OkbyEErIyatZ97PeV/MztcXVZbGW6hTzA8GQdzYE2aJauEN8sijIbx6jMqACw=="
+  "signature": "ULWS0M2btoSBJrkrqeUBLwL0FkPfuPg60l95s9xtNCzVUnLjR86dRAopzHXNMOzszmyy31Uxy7Pnjy4qNvN9Dg=="
 }
