@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:51:11Z",
+  "updated_at": "2026-01-08T01:51:48Z",
   "models": [
     {
       "id": "CGWM",
@@ -120,6 +120,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-19"
+    },
+    {
+      "id": "Nuggets In Dijon",
+      "name": "Nuggets In Dijon",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Nuggets In Dijon",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 12343535,
+          "sha256": "2908cfcdcac778a28218b25c239e8a78f2898266362b900b20797320d56c19a4"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "cf6376aa9a090f0da26c280ef69eabf9bbdd51d1faac9ed392919c3db69be916"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-08"
     },
     {
       "id": "Planplus",
@@ -276,5 +293,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "fvVsc6rfbW2FQkmVI8TNtIWajE5Wl/1yqI6xqTeRyqUEYUWVE0863dAz5rV7Oad7DOVkx4O0A6mVRyEnnX03Aw=="
+  "signature": "tKvI7Z+z0TVDIWpkcEQ25SjGn2z09Ybj65XqCTEwBAijmC+Vtttw6akY8g6RZrqbyCVG+yh5EjxsTXDLW2JPBQ=="
 }
