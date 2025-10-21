@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:50:40Z",
+  "updated_at": "2026-01-08T01:51:11Z",
   "models": [
     {
       "id": "CGWM",
@@ -65,6 +65,23 @@
         "driving_vision.onnx": {
           "size": 34708248,
           "sha256": "68f5e41678767240af478ebfca37a0adca18b2191f94a7cbe47304cb9fd2c70d"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-08"
+    },
+    {
+      "id": "gWM",
+      "name": "gWM",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/gWM",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "a5ca2c97f0e6c1feaa39d8452c4467d9e3f7d79b111aa6924f8eac5475dfbe67"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
         }
       },
       "minimum_selector_version": 1,
@@ -259,5 +276,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "ULWS0M2btoSBJrkrqeUBLwL0FkPfuPg60l95s9xtNCzVUnLjR86dRAopzHXNMOzszmyy31Uxy7Pnjy4qNvN9Dg=="
+  "signature": "fvVsc6rfbW2FQkmVI8TNtIWajE5Wl/1yqI6xqTeRyqUEYUWVE0863dAz5rV7Oad7DOVkx4O0A6mVRyEnnX03Aw=="
 }
