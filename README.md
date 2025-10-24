@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| CGWM | CGWM | 57.4MB | 2026-01-08 |
 | WMIv8 | WMIv8 | 57.4MB | 2026-01-04 |
 | MacroStiff | MacroStiff | 57.4MB | 2026-01-02 |
 | WMIv7 | WMIv7 | 57.4MB | 2026-01-02 |

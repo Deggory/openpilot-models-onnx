@@ -1,7 +1,24 @@
 {
   "version": 1,
-  "updated_at": "2026-01-04T01:35:45Z",
+  "updated_at": "2026-01-08T01:49:06Z",
   "models": [
+    {
+      "id": "CGWM",
+      "name": "CGWM",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/CGWM",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "5a6af5181c9acf76d5bae7a8f45cd501283f99b39ca822ec4d69b811be9089f1"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-08"
+    },
     {
       "id": "dark-souls-2",
       "name": "Dark Souls 2",
@@ -225,5 +242,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "RP5IQzCiYU49RYSQE+nw2o6u9TIg0QDG7YIDnOLGbh27egxc/OV+djqx4q4qSKXgOR5dgk5n6HzGUgPhsFNwCg=="
+  "signature": "9EIF0FrgSwVJ1vw5gF+tCzCS5OkbyEErIyatZ97PeV/MztcXVZbGW6hTzA8GQdzYE2aJauEN8sijIbx6jMqACw=="
 }
