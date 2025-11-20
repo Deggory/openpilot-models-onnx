@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:51:48Z",
+  "updated_at": "2026-01-08T01:52:24Z",
   "models": [
     {
       "id": "CGWM",
@@ -156,6 +156,23 @@
       "added_at": "2025-12-22"
     },
     {
+      "id": "st",
+      "name": "st",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/st",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926320,
+          "sha256": "3c7a3b327485c6053a28d032f79a4ae10370f56d7713c88bc2d79fa205ce9208"
+        },
+        "driving_vision.onnx": {
+          "size": 48578305,
+          "sha256": "b2bdc98bd67201b99c8f2d13f75875423ed055e6db71303824cd57e94a1dd6c2"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-08"
+    },
+    {
       "id": "The-Cool-peoples-v3",
       "name": "TCPv3",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/The-Cool-peoples-v3",
@@ -293,5 +310,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "tKvI7Z+z0TVDIWpkcEQ25SjGn2z09Ybj65XqCTEwBAijmC+Vtttw6akY8g6RZrqbyCVG+yh5EjxsTXDLW2JPBQ=="
+  "signature": "NUamXXKxA0geJ7QNw7N77AFUjFyYZJa1uBR8XyvQpx7TiXBG0Lvi3qrxX0nUONKxUx7KKSi1EMorUn2gu2YBCg=="
 }
