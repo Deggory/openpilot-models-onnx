@@ -21,14 +21,12 @@ from pathlib import Path
 
 # 프로젝트 루트
 ROOT_DIR = Path(__file__).parent.parent
+MODELS_DIR = ROOT_DIR / "models"
 MODELS_JSON = ROOT_DIR / "models.json"
-GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main"
+GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models"
 
 # 필수 파일
 REQUIRED_FILES = ["driving_policy.onnx", "driving_vision.onnx"]
-
-# 무시할 폴더
-IGNORE_DIRS = {".git", ".venv", "scripts", "__pycache__"}
 
 
 def calculate_sha256(filepath: Path) -> str:
@@ -41,11 +39,14 @@ def calculate_sha256(filepath: Path) -> str:
 
 
 def scan_model_folders() -> list[Path]:
-    """모델 폴더 스캔 (ONNX 파일이 있는 폴더)"""
+    """models/ 폴더 내 모델 스캔 (ONNX 파일이 있는 폴더)"""
     model_folders = []
 
-    for item in ROOT_DIR.iterdir():
-        if item.is_dir() and item.name not in IGNORE_DIRS:
+    # models 폴더가 없으면 생성
+    MODELS_DIR.mkdir(exist_ok=True)
+
+    for item in MODELS_DIR.iterdir():
+        if item.is_dir():
             # 필수 파일 체크
             has_all_files = all((item / f).exists() for f in REQUIRED_FILES)
             if has_all_files:
@@ -123,9 +124,10 @@ def update_models_json():
         print("\n모델 폴더를 찾을 수 없습니다.")
         print("폴더 구조 예시:")
         print("  openpilot-models/")
-        print("  └── experimental_v1/")
-        print("      ├── driving_policy.onnx")
-        print("      └── driving_vision.onnx")
+        print("  └── models/")
+        print("      └── wmiv2/")
+        print("          ├── driving_policy.onnx")
+        print("          └── driving_vision.onnx")
         return
 
     print(f"\n{len(folders)}개 모델 폴더 발견:\n")

@@ -10,25 +10,25 @@ Custom driving models for openpilot (carrot fork).
 
 ## Models
 
-| ID | Name | Description |
-|----|------|-------------|
-| (coming soon) | - | - |
+| ID | Name |
+|----|------|
+| (coming soon) | - |
 
 ## 모델 추가 방법
 
 ```bash
-# 1. 새 폴더 생성
-mkdir experimental_v1
+# 1. models 폴더에 새 모델 폴더 생성
+mkdir -p models/wmiv2
 
 # 2. ONNX 파일 복사
-cp /path/to/driving_policy.onnx experimental_v1/
-cp /path/to/driving_vision.onnx experimental_v1/
+cp /path/to/driving_policy.onnx models/wmiv2/
+cp /path/to/driving_vision.onnx models/wmiv2/
 
 # 3. 스크립트 실행 (자동으로 models.json 업데이트 + 서명)
 uv run python scripts/update_models.py
 
 # 4. 커밋 및 푸시
-git add . && git commit -m "feat: 새 모델 추가" && git push
+git add . && git commit -m "feat: WMI v2 모델 추가" && git push
 ```
 
 ## Structure
@@ -42,9 +42,10 @@ openpilot-models/
 │   └── keys/
 │       ├── private_key.pem  # 개인키 (git 제외)
 │       └── public_key.pem   # 공개키
-└── {model_id}/
-    ├── driving_policy.onnx
-    └── driving_vision.onnx
+└── models/                # 모델 저장 폴더
+    └── {model_id}/
+        ├── driving_policy.onnx
+        └── driving_vision.onnx
 ```
 
 ## Security
