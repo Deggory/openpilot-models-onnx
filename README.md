@@ -18,6 +18,7 @@ Custom driving models for openpilot (carrot fork).
 | Planplus | Planplus | 70.7MB |
 | WMIv2 | WMIv2 | 57.4MB |
 | WMIv3 | WMIv3 | 57.4MB |
+| WMIv4 | WMIv4 | 57.4MB |
 
 ## 모델 추가 방법
 
