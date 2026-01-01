@@ -14,6 +14,7 @@ Custom driving models for openpilot (carrot fork).
 |----|------|------|
 | dark-souls-2 | Dark Souls 2 | 57.4MB |
 | DTRv6 | DTRv6 | 59.0MB |
+| MacroStiff | MacroStiff | 57.4MB |
 | neurips | neurips | 57.4MB |
 | Planplus | Planplus | 70.7MB |
 | WMIv2 | WMIv2 | 57.4MB |
