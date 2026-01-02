@@ -76,6 +76,9 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
     # 기존 정보가 있고 파일 해시가 같으면 기존 정보 유지
     if existing and existing.get("files") == files:
         print(f"  [{model_id}] 변경 없음 (기존 정보 유지)")
+        # added_at이 없으면 추가
+        if "added_at" not in existing:
+            existing["added_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         return existing
 
     # 새 모델이거나 파일이 변경됨
@@ -83,17 +86,20 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
         print(f"  [{model_id}] 파일 변경 감지!")
         name = existing.get("name", model_id)
         minimum_selector_version = existing.get("minimum_selector_version", 1)
+        added_at = existing.get("added_at", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
     else:
         print(f"  [{model_id}] 새 모델 발견!")
         name = input(f"    모델 이름 (기본: {model_id}): ").strip() or model_id
         minimum_selector_version = 1
+        added_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     return {
         "id": model_id,
         "name": name,
         "base_url": f"{GITHUB_BASE_URL}/{model_id}",
         "files": files,
-        "minimum_selector_version": minimum_selector_version
+        "minimum_selector_version": minimum_selector_version,
+        "added_at": added_at
     }
 
 
@@ -104,16 +110,20 @@ def update_readme(models: list):
 
     content = README_FILE.read_text(encoding="utf-8")
 
+    # 날짜 기준 내림차순 정렬 (최신순)
+    sorted_models = sorted(models, key=lambda m: m.get("added_at", ""), reverse=True)
+
     # Models 테이블 생성
     table_lines = [
         "## Models",
         "",
-        "| ID | Name | Size |",
-        "|----|------|------|",
+        "| ID | Name | Size | Added |",
+        "|----|------|------|-------|",
     ]
-    for m in models:
+    for m in sorted_models:
         size_mb = sum(f["size"] for f in m["files"].values()) / (1024 * 1024)
-        table_lines.append(f"| {m['id']} | {m['name']} | {size_mb:.1f}MB |")
+        added_at = m.get("added_at", "-")
+        table_lines.append(f"| {m['id']} | {m['name']} | {size_mb:.1f}MB | {added_at} |")
     table_lines.append("")
 
     # ## Models 부터 다음 ## 섹션 전까지 교체
