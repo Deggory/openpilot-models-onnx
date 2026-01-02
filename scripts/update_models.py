@@ -90,8 +90,9 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
     else:
         print(f"  [{model_id}] 새 모델 발견!")
         name = input(f"    모델 이름 (기본: {model_id}): ").strip() or model_id
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        added_at = input(f"    추가 날짜 (기본: {today}): ").strip() or today
         minimum_selector_version = 1
-        added_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     return {
         "id": model_id,
