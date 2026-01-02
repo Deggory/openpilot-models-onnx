@@ -23,6 +23,7 @@ Custom driving models for openpilot (carrot fork).
 | dark-souls-2 | Dark Souls 2 | 57.4MB | 2025-12-19 |
 | neurips | neurips | 57.4MB | 2025-12-19 |
 | WMIv2 | WMIv2 | 57.4MB | 2025-12-19 |
+| The-Cool-peoples-v3 | TCPv3 | 57.4MB | 2025-10-21 |
 
 ## 모델 추가 방법
 

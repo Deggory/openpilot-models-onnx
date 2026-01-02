@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-01T23:52:46Z",
+  "updated_at": "2026-01-02T06:47:36Z",
   "models": [
     {
       "id": "dark-souls-2",
@@ -86,6 +86,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-22"
+    },
+    {
+      "id": "The-Cool-peoples-v3",
+      "name": "TCPv3",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/The-Cool-peoples-v3",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "c5a1f0655ddf266ed42ad1980389d96f47cc5e756da1fa3ca1477a920bb9b157"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2025-10-21"
     },
     {
       "id": "WMIv2",
@@ -191,5 +208,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "nwA3nO5fVv0Hk9wN9HKIKYsyid6SztNGMZS7bRYPdR33xPnWXa9Ezci1gMZNs4I1EMz9CEUHwv9KnWdGxugBAQ=="
+  "signature": "z4zuOaqmB0cnoCJGfYZA3633J+U1VIYLukiOnNIjABrSwgD4qDpV/Fu7HQmYEDI3xcAThSgle5XBGpC5pZLJAA=="
 }
