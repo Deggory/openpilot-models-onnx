@@ -17,6 +17,7 @@ Custom driving models for openpilot (carrot fork).
 | gWM | gWM | 57.4MB | 2026-01-08 |
 | Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2026-01-08 |
 | st | st | 59.6MB | 2026-01-08 |
+| WMIv9 | WMIv9 | 57.4MB | 2026-01-08 |
 | WMIv8 | WMIv8 | 57.4MB | 2026-01-04 |
 | MacroStiff | MacroStiff | 57.4MB | 2026-01-02 |
 | WMIv7 | WMIv7 | 57.4MB | 2026-01-02 |
