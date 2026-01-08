@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:59:24Z",
+  "updated_at": "2026-01-08T02:02:41Z",
   "models": [
     {
       "id": "CGWM",
@@ -17,7 +17,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2025-10-24"
+      "added_at": "2025-10-25"
     },
     {
       "id": "dark-souls-2",
@@ -85,7 +85,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2025-10-21"
+      "added_at": "2025-10-22"
     },
     {
       "id": "MacroStiff",
@@ -136,7 +136,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2025-10-09"
+      "added_at": "2025-10-10"
     },
     {
       "id": "Planplus",
@@ -323,9 +323,9 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-07"
+      "added_at": "2026-01-08"
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "MpENz07fP27YE0IVjvqlIijkQpz+9v8yXl3BntbF1DLhV7ZEGViIZ+6yQuTLBw9wU9hq6acvHv18b2Q4l8bIDQ=="
+  "signature": "Y7zjfb0LKSNIFUtTS3OSJ0vV6Act5r+GiK2o6eChZVg86xYG1JeG/CM/nI4/PgyZclAJrXY9hI0c0irJ3iD8DA=="
 }

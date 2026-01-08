@@ -12,7 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
-| WMIv9 | WMIv9 | 57.4MB | 2026-01-07 |
+| WMIv9 | WMIv9 | 57.4MB | 2026-01-08 |
 | WMIv8 | WMIv8 | 57.4MB | 2026-01-04 |
 | MacroStiff | MacroStiff | 57.4MB | 2026-01-02 |
 | WMIv7 | WMIv7 | 57.4MB | 2026-01-02 |
@@ -26,10 +26,10 @@ Custom driving models for openpilot (carrot fork).
 | neurips | neurips | 57.4MB | 2025-12-19 |
 | WMIv2 | WMIv2 | 57.4MB | 2025-12-19 |
 | st | st | 59.6MB | 2025-11-20 |
-| CGWM | CGWM | 57.4MB | 2025-10-24 |
-| gWM | gWM | 57.4MB | 2025-10-21 |
+| CGWM | CGWM | 57.4MB | 2025-10-25 |
+| gWM | gWM | 57.4MB | 2025-10-22 |
 | The-Cool-peoples-v3 | TCPv3 | 57.4MB | 2025-10-21 |
-| Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2025-10-09 |
+| Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2025-10-10 |
 | Fly By Wire | Fly By Wire | 44.9MB | 2025-09-05 |
 
 ## 모델 추가 방법
