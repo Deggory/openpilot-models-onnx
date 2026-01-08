@@ -85,7 +85,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-12-19"
     },
     {
       "id": "Nuggets In Dijon",
@@ -307,23 +307,6 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-10-22"
-    },
-    {
-      "id": "neurips",
-      "name": "neurips",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/neurips",
-      "files": {
-        "driving_policy.onnx": {
-          "size": 13927145,
-          "sha256": "c84851714d8d221e378bd27db889b2c550b9e35b42f6508af1d826d0f06caffb"
-        },
-        "driving_vision.onnx": {
-          "size": 46271942,
-          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
-        }
-      },
-      "minimum_selector_version": 1,
-      "added_at": "2025-12-19"
     },
     {
       "id": "st",
