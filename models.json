@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T06:48:14Z",
+  "updated_at": "2026-01-08T06:51:25Z",
   "models": [
     {
       "id": "CGWM",
@@ -327,5 +327,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "NEEDS_SIGNING"
+  "signature": "nnOVuh1/HEBN8YknO5llX/Z0SI5Zpq/7ue9qX1ato0Ux7aLmjjeAl/50lwt8G9+aa8xp8o9ti0vzfPQBU4tHAA=="
 }
