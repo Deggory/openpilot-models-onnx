@@ -12,12 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
-| CGWM | CGWM | 57.4MB | 2026-01-08 |
-| Fly By Wire | Fly By Wire | 44.9MB | 2026-01-08 |
-| gWM | gWM | 57.4MB | 2026-01-08 |
-| Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2026-01-08 |
-| st | st | 59.6MB | 2026-01-08 |
-| WMIv9 | WMIv9 | 57.4MB | 2026-01-08 |
+| WMIv9 | WMIv9 | 57.4MB | 2026-01-07 |
 | WMIv8 | WMIv8 | 57.4MB | 2026-01-04 |
 | MacroStiff | MacroStiff | 57.4MB | 2026-01-02 |
 | WMIv7 | WMIv7 | 57.4MB | 2026-01-02 |
@@ -30,7 +25,12 @@ Custom driving models for openpilot (carrot fork).
 | dark-souls-2 | Dark Souls 2 | 57.4MB | 2025-12-19 |
 | neurips | neurips | 57.4MB | 2025-12-19 |
 | WMIv2 | WMIv2 | 57.4MB | 2025-12-19 |
+| st | st | 59.6MB | 2025-11-20 |
+| CGWM | CGWM | 57.4MB | 2025-10-24 |
+| gWM | gWM | 57.4MB | 2025-10-21 |
 | The-Cool-peoples-v3 | TCPv3 | 57.4MB | 2025-10-21 |
+| Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2025-10-09 |
+| Fly By Wire | Fly By Wire | 44.9MB | 2025-09-05 |
 
 ## 모델 추가 방법
 

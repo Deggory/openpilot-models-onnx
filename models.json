@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T01:52:57Z",
+  "updated_at": "2026-01-08T01:59:24Z",
   "models": [
     {
       "id": "CGWM",
@@ -17,7 +17,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-10-24"
     },
     {
       "id": "dark-souls-2",
@@ -68,7 +68,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-09-05"
     },
     {
       "id": "gWM",
@@ -85,7 +85,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-10-21"
     },
     {
       "id": "MacroStiff",
@@ -136,7 +136,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-10-09"
     },
     {
       "id": "Planplus",
@@ -170,7 +170,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2025-11-20"
     },
     {
       "id": "The-Cool-peoples-v3",
@@ -323,9 +323,9 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-08"
+      "added_at": "2026-01-07"
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "9o8uy6Mcfx6mfMqntnep1cn6NLJmZqTH84xGvM5inqqfVYZCfdPmDDBMiyyRUwGg2I9GuFBYqHfo4QoMwQ29Bg=="
+  "signature": "MpENz07fP27YE0IVjvqlIijkQpz+9v8yXl3BntbF1DLhV7ZEGViIZ+6yQuTLBw9wU9hq6acvHv18b2Q4l8bIDQ=="
 }
