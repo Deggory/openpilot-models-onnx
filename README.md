@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| Neurips | Neurips | 57.4MB | 2026-01-08 |
 | WMIv9 | WMIv9 | 57.4MB | 2026-01-08 |
 | WMIv8 | WMIv8 | 57.4MB | 2026-01-04 |
 | MacroStiff | MacroStiff | 57.4MB | 2026-01-02 |
@@ -22,9 +23,9 @@ Custom driving models for openpilot (carrot fork).
 | Planplus | Planplus | 70.7MB | 2025-12-22 |
 | DTRv6 | DTRv6 | 59.0MB | 2025-12-21 |
 | WMIv3 | WMIv3 | 57.4MB | 2025-12-20 |
+| WMIv2 | WMIv2 | 57.4MB | 2025-12-19 |
 | dark-souls-2 | Dark Souls 2 | 57.4MB | 2025-12-19 |
 | neurips | neurips | 57.4MB | 2025-12-19 |
-| WMIv2 | WMIv2 | 57.4MB | 2025-12-19 |
 | st | st | 59.6MB | 2025-11-20 |
 | CGWM | CGWM | 57.4MB | 2025-10-25 |
 | gWM | gWM | 57.4MB | 2025-10-22 |

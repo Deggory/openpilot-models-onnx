@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T02:02:41Z",
+  "updated_at": "2026-01-08T05:06:11Z",
   "models": [
     {
       "id": "CGWM",
@@ -18,23 +18,6 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-10-25"
-    },
-    {
-      "id": "dark-souls-2",
-      "name": "Dark Souls 2",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/dark-souls-2",
-      "files": {
-        "driving_policy.onnx": {
-          "size": 13926324,
-          "sha256": "f8fe9a71b0fd428a045a82ed50790179f77aa664391198f078e11e7b2cb2c2d7"
-        },
-        "driving_vision.onnx": {
-          "size": 46271942,
-          "sha256": "1dc66bc06f250b577653ccbeaa2c6521b3d46749f601d0a1a366419e929ca438"
-        }
-      },
-      "minimum_selector_version": 1,
-      "added_at": "2025-12-19"
     },
     {
       "id": "DTRv6",
@@ -71,23 +54,6 @@
       "added_at": "2025-09-05"
     },
     {
-      "id": "gWM",
-      "name": "gWM",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/gWM",
-      "files": {
-        "driving_policy.onnx": {
-          "size": 13926324,
-          "sha256": "a5ca2c97f0e6c1feaa39d8452c4467d9e3f7d79b111aa6924f8eac5475dfbe67"
-        },
-        "driving_vision.onnx": {
-          "size": 46271942,
-          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
-        }
-      },
-      "minimum_selector_version": 1,
-      "added_at": "2025-10-22"
-    },
-    {
       "id": "MacroStiff",
       "name": "MacroStiff",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/MacroStiff",
@@ -105,9 +71,9 @@
       "added_at": "2026-01-02"
     },
     {
-      "id": "neurips",
-      "name": "neurips",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/neurips",
+      "id": "Neurips",
+      "name": "Neurips",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Neurips",
       "files": {
         "driving_policy.onnx": {
           "size": 13927145,
@@ -119,7 +85,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2025-12-19"
+      "added_at": "2026-01-08"
     },
     {
       "id": "Nuggets In Dijon",
@@ -154,23 +120,6 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-22"
-    },
-    {
-      "id": "st",
-      "name": "st",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/st",
-      "files": {
-        "driving_policy.onnx": {
-          "size": 13926320,
-          "sha256": "3c7a3b327485c6053a28d032f79a4ae10370f56d7713c88bc2d79fa205ce9208"
-        },
-        "driving_vision.onnx": {
-          "size": 48578305,
-          "sha256": "b2bdc98bd67201b99c8f2d13f75875423ed055e6db71303824cd57e94a1dd6c2"
-        }
-      },
-      "minimum_selector_version": 1,
-      "added_at": "2025-11-20"
     },
     {
       "id": "The-Cool-peoples-v3",
@@ -324,8 +273,76 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2026-01-08"
+    },
+    {
+      "id": "dark-souls-2",
+      "name": "Dark Souls 2",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/dark-souls-2",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "f8fe9a71b0fd428a045a82ed50790179f77aa664391198f078e11e7b2cb2c2d7"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "1dc66bc06f250b577653ccbeaa2c6521b3d46749f601d0a1a366419e929ca438"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2025-12-19"
+    },
+    {
+      "id": "gWM",
+      "name": "gWM",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/gWM",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "a5ca2c97f0e6c1feaa39d8452c4467d9e3f7d79b111aa6924f8eac5475dfbe67"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2025-10-22"
+    },
+    {
+      "id": "neurips",
+      "name": "neurips",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/neurips",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13927145,
+          "sha256": "c84851714d8d221e378bd27db889b2c550b9e35b42f6508af1d826d0f06caffb"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "8f16d548ea4eb5d01518a9e90d4527cd97c31a84bcaf6f695dead8f0015fecc4"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2025-12-19"
+    },
+    {
+      "id": "st",
+      "name": "st",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/st",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926320,
+          "sha256": "3c7a3b327485c6053a28d032f79a4ae10370f56d7713c88bc2d79fa205ce9208"
+        },
+        "driving_vision.onnx": {
+          "size": 48578305,
+          "sha256": "b2bdc98bd67201b99c8f2d13f75875423ed055e6db71303824cd57e94a1dd6c2"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2025-11-20"
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "Y7zjfb0LKSNIFUtTS3OSJ0vV6Act5r+GiK2o6eChZVg86xYG1JeG/CM/nI4/PgyZclAJrXY9hI0c0irJ3iD8DA=="
+  "signature": "NEEDS_SIGNING"
 }
