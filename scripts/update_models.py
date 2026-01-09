@@ -17,7 +17,10 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+
+# 한국 시간대 (UTC+9)
+KST = timezone(timedelta(hours=9))
 from pathlib import Path
 
 # 프로젝트 루트
@@ -78,7 +81,7 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
         print(f"  [{model_id}] 변경 없음 (기존 정보 유지)")
         # added_at이 없으면 추가
         if "added_at" not in existing:
-            existing["added_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            existing["added_at"] = datetime.now(KST).strftime("%Y-%m-%d")
         return existing
 
     # 새 모델이거나 파일이 변경됨
@@ -86,11 +89,11 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
         print(f"  [{model_id}] 파일 변경 감지!")
         name = existing.get("name", model_id)
         minimum_selector_version = existing.get("minimum_selector_version", 1)
-        added_at = existing.get("added_at", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+        added_at = existing.get("added_at", datetime.now(KST).strftime("%Y-%m-%d"))
     else:
         print(f"  [{model_id}] 새 모델 발견!")
         name = input(f"    모델 이름 (기본: {model_id}): ").strip() or model_id
-        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        today = datetime.now(KST).strftime("%Y-%m-%d")
         added_at = input(f"    추가 날짜 (기본: {today}): ").strip() or today
         minimum_selector_version = 1
 
@@ -181,7 +184,7 @@ def update_models_json():
 
     # manifest 업데이트
     manifest["models"] = new_models
-    manifest["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    manifest["updated_at"] = datetime.now(KST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 
     # 서명 제거 (sign_manifest.py에서 다시 서명)
     manifest["signature"] = "NEEDS_SIGNING"
