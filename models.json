@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-09T02:09:10Z",
+  "updated_at": "2026-01-09T04:19:22Z",
   "models": [
     {
       "id": "CGWM",
@@ -120,6 +120,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-22"
+    },
+    {
+      "id": "SC",
+      "name": "SC",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/SC",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "66f406ee179d984a4d8c93e38da479dcd1893127308dd3a7c322a7481a6b51b2"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "1dc66bc06f250b577653ccbeaa2c6521b3d46749f601d0a1a366419e929ca438"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-09"
     },
     {
       "id": "SC driving",
@@ -344,5 +361,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "VcRcPLsPyL6oP1tuWCEgBDBpAT0oGm8q8ZTveuMVJmS/dDyNOlfPK4Kcau8dYEkk2v5E+d6MCoKdjs20+UNEBA=="
+  "signature": "RNAEIrgGo8d6aDdIS6ialt5TnIY3uMwZ3n3prXCb6ob0IOe6gzJsDu+Olu/aLyd0IpRWPCerEIoIB7ulfVm3Bg=="
 }
