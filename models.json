@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-08T06:51:25Z",
+  "updated_at": "2026-01-09T02:09:10Z",
   "models": [
     {
       "id": "CGWM",
@@ -120,6 +120,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-12-22"
+    },
+    {
+      "id": "SC driving",
+      "name": "SC driving",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/SC driving",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "66f406ee179d984a4d8c93e38da479dcd1893127308dd3a7c322a7481a6b51b2"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "1dc66bc06f250b577653ccbeaa2c6521b3d46749f601d0a1a366419e929ca438"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-09"
     },
     {
       "id": "The-Cool-peoples-v3",
@@ -327,5 +344,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "nnOVuh1/HEBN8YknO5llX/Z0SI5Zpq/7ue9qX1ato0Ux7aLmjjeAl/50lwt8G9+aa8xp8o9ti0vzfPQBU4tHAA=="
+  "signature": "VcRcPLsPyL6oP1tuWCEgBDBpAT0oGm8q8ZTveuMVJmS/dDyNOlfPK4Kcau8dYEkk2v5E+d6MCoKdjs20+UNEBA=="
 }
