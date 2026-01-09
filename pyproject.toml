@@ -1,0 +1,8 @@
+[project]
+name = "openpilot-models"
+version = "0.1.0"
+description = "openpilot models repository"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography",
+]
