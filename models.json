@@ -170,7 +170,7 @@
         }
       },
       "minimum_selector_version": 1,
-      "added_at": "2026-01-09"
+      "added_at": "2026-01-10"
     },
     {
       "id": "WMIv2",
@@ -361,5 +361,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "Yqc/T9eTj/Cnx65zBMsEHs5AuOsPoypg8EFFIVm8NNXEP0YVaiPhcEP8NiN++WEuYOLy4NS7M67/IBy57886Dw=="
+  "signature": "BIJYSxhE672vumy5Tz1GgvZc2RxPDFw2qU09g8eernaz/n5UYD/zlaqrHuw7VddjVyrEEdZxAuCYxwH/JdGZDg=="
 }
