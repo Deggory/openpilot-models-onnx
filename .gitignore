@@ -11,3 +11,6 @@ __pycache__/
 # Claude Code
 CLAUDE.md
 .claude
+
+# Local docs
+docs/
