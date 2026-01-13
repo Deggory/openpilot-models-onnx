@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-01-09T20:39:11Z",
+  "updated_at": "2026-01-14T06:06:49+09:00",
   "models": [
     {
       "id": "CGWM",
@@ -171,6 +171,23 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2026-01-10"
+    },
+    {
+      "id": "WMIv11",
+      "name": "WMIv11",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/WMIv11",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 13926324,
+          "sha256": "1edea5bb56f876db4cec97c150799513f6a59373f3ad152d55e4dcaab1b809e3"
+        },
+        "driving_vision.onnx": {
+          "size": 46271942,
+          "sha256": "1dc66bc06f250b577653ccbeaa2c6521b3d46749f601d0a1a366419e929ca438"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-01-14"
     },
     {
       "id": "WMIv2",
@@ -361,5 +378,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "BIJYSxhE672vumy5Tz1GgvZc2RxPDFw2qU09g8eernaz/n5UYD/zlaqrHuw7VddjVyrEEdZxAuCYxwH/JdGZDg=="
+  "signature": "T/8Wmfq2Hq7d34fHuj+MJ53HNxseF5XiRkS7poEigPq8lNHdUkk2jHM4pVXIsZkqoqP6IUx6uouOIUUimv+hAg=="
 }
