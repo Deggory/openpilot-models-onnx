@@ -1,7 +1,24 @@
 {
   "version": 1,
-  "updated_at": "2026-01-14T06:06:49+09:00",
+  "updated_at": "2026-02-01T12:17:16+09:00",
   "models": [
+    {
+      "id": "CD210",
+      "name": "CD210",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/CD210",
+      "files": {
+        "driving_policy.onnx": {
+          "size": 14060847,
+          "sha256": "78477124cbf3ffe30fa951ebada8410b43c4242c6054584d656f1d329b067e15"
+        },
+        "driving_vision.onnx": {
+          "size": 46877473,
+          "sha256": "ee29ee5bce84d1ce23e9ff381280de9b4e4d96d2934cd751740354884e112c66"
+        }
+      },
+      "minimum_selector_version": 1,
+      "added_at": "2026-02-01"
+    },
     {
       "id": "CGWM",
       "name": "CGWM",
@@ -378,5 +395,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "T/8Wmfq2Hq7d34fHuj+MJ53HNxseF5XiRkS7poEigPq8lNHdUkk2jHM4pVXIsZkqoqP6IUx6uouOIUUimv+hAg=="
+  "signature": "pnt1zdrS/UHP6nu57y2E0FU0HhDTrWDQiVQ4Gk1sj61ICKZKUuzlgTYGRfYKlsDyKKYa2Akahf5el79cAx92Ag=="
 }
