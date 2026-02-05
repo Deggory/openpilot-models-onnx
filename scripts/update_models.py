@@ -30,8 +30,11 @@ MODELS_JSON = ROOT_DIR / "models.json"
 README_FILE = ROOT_DIR / "README.md"
 GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models"
 
-# 필수 파일
+# 필수 파일 (폴더 유효성 검사용)
 REQUIRED_FILES = ["driving_policy.onnx", "driving_vision.onnx"]
+
+# 제외 패턴 (파일명에 포함되면 등록 제외)
+EXCLUDE_PATTERNS = ["dmonitoring", "big"]
 
 
 def calculate_sha256(filepath: Path) -> str:
@@ -67,11 +70,13 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
     # 기존 모델 정보가 있으면 재사용
     existing = existing_models.get(model_id, {})
 
-    # 파일 정보 계산
+    # 파일 정보 계산 (폴더 내 모든 .onnx 파일, 제외 패턴 적용)
     files = {}
-    for filename in REQUIRED_FILES:
-        filepath = folder / filename
-        files[filename] = {
+    for filepath in sorted(folder.glob("*.onnx")):
+        if any(p in filepath.name.lower() for p in EXCLUDE_PATTERNS):
+            print(f"    [{model_id}] 제외: {filepath.name}")
+            continue
+        files[filepath.name] = {
             "size": filepath.stat().st_size,
             "sha256": calculate_sha256(filepath)
         }
