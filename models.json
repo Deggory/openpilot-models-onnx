@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-02-01T12:17:16+09:00",
+  "updated_at": "2026-02-05T10:25:13+09:00",
   "models": [
     {
       "id": "CD210",
@@ -120,6 +120,27 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-10-10"
+    },
+    {
+      "id": "Off policy",
+      "name": "Off policy",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Off policy",
+      "files": {
+        "driving_off_policy.onnx": {
+          "size": 13201410,
+          "sha256": "ef767786c3cfeae9a2ccb49c808b5fd1b09fd9b7fd2368903d3dc3f57ffde7e8"
+        },
+        "driving_policy.onnx": {
+          "size": 13926287,
+          "sha256": "9dc47ec9a3a82f07d31c085d6491ba6cac14f2f43e9c0b8a6782b3750330c552"
+        },
+        "driving_vision.onnx": {
+          "size": 34863669,
+          "sha256": "144733175c43c0c5d902d5decad63cc39e113218bd4b1b21164f108ecb5cf966"
+        }
+      },
+      "minimum_selector_version": 2,
+      "added_at": "2026-02-05"
     },
     {
       "id": "Planplus",
@@ -395,5 +416,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "pnt1zdrS/UHP6nu57y2E0FU0HhDTrWDQiVQ4Gk1sj61ICKZKUuzlgTYGRfYKlsDyKKYa2Akahf5el79cAx92Ag=="
+  "signature": "at9ZWSP+qQWJEEiXebm+xvU13R4o58/F5QzbcTQJw8u79mttLN38OXeDDYIJPwnfUW9xljS9oAMY0aQoubggDA=="
 }
