@@ -104,7 +104,9 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
         # 호환성 검사 결과 (watcher에서 전달)
         compat_input = input(f"    modeld 호환 여부 (y/n, 기본: y): ").strip().lower()
         if compat_input == 'n':
-            minimum_selector_version = 2  # 비호환: 높은 버전으로 차단
+            # SELECTOR_VERSION 환경변수에서 현재 버전 읽기 (watcher에서 전달)
+            selector_ver = int(os.environ.get("SELECTOR_VERSION", "1"))
+            minimum_selector_version = selector_ver + 1
             print(f"    [BLOCKED] 비호환 모델 - minimum_selector_version: {minimum_selector_version}")
         else:
             minimum_selector_version = 1
