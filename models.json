@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-05-22T13:46:04+09:00",
+  "updated_at": "2026-05-22T16:46:04+09:00",
   "models": [
     {
       "id": "CD210",
@@ -669,6 +669,27 @@
       "added_at": "2025-10-21"
     },
     {
+      "id": "Update split",
+      "name": "Update split",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Update split",
+      "files": {
+        "driving_off_policy.onnx": {
+          "size": 33484553,
+          "sha256": "a58de6785684993e8754ffd644fb8824e8de7d0f5f8fb80e3e3492e725f0c955"
+        },
+        "driving_on_policy.onnx": {
+          "size": 20923559,
+          "sha256": "bbea6c392e16cb46ee30d3faac6a84e76a6319aeca704629b8169e128f79d0f9"
+        },
+        "driving_vision.onnx": {
+          "size": 20866635,
+          "sha256": "41849c047842dfd9d7cf480392d5959aaca3ab049e931b419d956cfb1e890726"
+        }
+      },
+      "minimum_selector_version": 3,
+      "added_at": "2026-05-22"
+    },
+    {
       "id": "WMIv10",
       "name": "WMIv10",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/WMIv10",
@@ -954,5 +975,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "pJsV0K6V3Tbn3IGgfYGeYCKqS8hbYjE1BHgnRoq4GNoI2bSh3fhZhLgNgAg4By8HLyT3Z5wBcPWmTs5/C5VbDQ=="
+  "signature": "kgDrPgTuelRvBNLcQHnA3+KgYHVLEYVQeAn5WowcP7Rl544/ygAKJ1YDScZ91UFAsJtVQxFdyRAK5anX76LLAw=="
 }
