@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| Op model16 deepv4 | Op model16 deepv4 | 92.1MB | 2026-05-22 |
 | Op model16 deepv3 | Op model16 deepv3 | 92.1MB | 2026-05-22 |
 | Op model16 deepv2 | Op model16 deepv2 | 92.7MB | 2026-05-22 |
 | Op model16 deep | Op model16 deep | 92.1MB | 2026-05-21 |
