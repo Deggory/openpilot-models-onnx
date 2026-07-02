@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-02T18:03:09+09:00",
+  "updated_at": "2026-07-02T18:04:19+09:00",
   "models": [
     {
       "id": "CD210",
@@ -771,6 +771,19 @@
       "added_at": "2025-10-21"
     },
     {
+      "id": "Toby Rl",
+      "name": "Toby Rl",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Toby Rl",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96599486,
+          "sha256": "09e29ea64922706ce892882155fba53894715fe2aa743b59c539e3f8984a50fa"
+        }
+      },
+      "minimum_selector_version": 5,
+      "added_at": "2026-07-02"
+    },
+    {
       "id": "WMIv10",
       "name": "WMIv10",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/WMIv10",
@@ -1056,5 +1069,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "6DJmeVjzYYc78notpVUi1mJ+asEGo+/cxJ0X53L7Twm05KaRcio8/64EFWSqJyoCVx2LORLQi7cF26qYsBVNDQ=="
+  "signature": "7fcC+Sa/bnHJhchS8mBaULAWckDzxqAnlvvmdDefxqXwk1cuGPU9JxaWQ6hHYXH4RR7ExsXo1lFBRoRlcU2VDA=="
 }
