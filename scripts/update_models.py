@@ -78,14 +78,24 @@ def get_model_info(folder: Path, existing_models: dict) -> dict:
     # meta.json(name/base_url/files/minimum_selector_version/added_at)으로 등록
     meta_file = folder / "meta.json"
     if meta_file.exists():
-        with open(meta_file, "r", encoding="utf-8") as f:
-            meta = json.load(f)
+        try:
+            with open(meta_file, "r", encoding="utf-8") as f:
+                meta = json.load(f)
+            files = meta["files"]
+        except (json.JSONDecodeError, KeyError, OSError) as e:
+            # meta.json 손상 시 전체 갱신을 막지 않도록 기존 등록 정보를 유지
+            existing = existing_models.get(model_id)
+            if existing:
+                print(f"  [{model_id}] meta.json 오류({e}) - 기존 models.json 항목 유지")
+                return existing
+            print(f"  [{model_id}] meta.json 오류({e}) - 등록 스킵")
+            return None
         print(f"  [{model_id}] 외부 호스팅 모델 (meta.json 사용)")
         return {
             "id": model_id,
             "name": meta.get("name", model_id),
             "base_url": meta.get("base_url", f"{GITHUB_BASE_URL}/{model_id}"),
-            "files": meta["files"],
+            "files": files,
             "minimum_selector_version": meta.get("minimum_selector_version", 1),
             "added_at": meta.get("added_at", datetime.now(KST).strftime("%Y-%m-%d")),
         }
@@ -223,7 +233,8 @@ def update_models_json():
     new_models = []
     for folder in sorted(folders):
         model_info = get_model_info(folder, existing_models)
-        new_models.append(model_info)
+        if model_info is not None:
+            new_models.append(model_info)
 
     # manifest 업데이트
     manifest["models"] = new_models
