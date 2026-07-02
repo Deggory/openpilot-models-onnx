@@ -49,6 +49,11 @@ LEGACY_ALLOWED_FILES = {
     "driving_off_policy.onnx",
 }
 
+# v4+ 클라이언트(openpilot carrot/model_selector/config.py의 ALLOWED_ONNX_FILES)가
+# 아는 파일명. 이 목록 밖의 파일을 쓰는 항목은 v4의 관용 파서가 조용히 숨기므로
+# (에러는 안 나지만 어떤 셀렉터에도 표시되지 않음) 등록 시 경고한다.
+V4_CLIENT_FILES = LEGACY_ALLOWED_FILES | {"driving_supercombo.onnx"}
+
 # 필수 파일 세트 (폴더 유효성 검사용, 한 세트가 전부 존재하면 유효, | 로 대체 파일 지원)
 REQUIRED_FILE_SETS = [
     # 구 구조: vision + policy 분리형
@@ -221,12 +226,57 @@ def update_readme(models: list):
 
 
 def is_legacy_compatible(model: dict) -> bool:
-    """모델의 파일 세트가 구버전(v3 이하) 셀렉터 allowlist 안에 있는지"""
-    return set(model.get("files") or {}) <= LEGACY_ALLOWED_FILES
+    """이 항목이 models.json(v3 이하 전용)에 실려도 안전한지.
+
+    파일명이 v3 allowlist 안에 있어야 할 뿐 아니라, v3 파서(_parse_model)가
+    예외 없이 통과할 구조여야 한다 — v3는 항목 하나의 파싱 실패(id 누락,
+    base_url 누락, size 비정수 등)로도 목록 전체를 중단하므로 구조까지 검사한다.
+    """
+    try:
+        if not str(model["id"]):
+            return False
+        if not (model.get("base_url") or model.get("baseUrl")):
+            return False
+        files = model.get("files")
+        if not isinstance(files, dict):
+            return False
+        for name, info in files.items():
+            if name not in LEGACY_ALLOWED_FILES:
+                return False
+            int(info["size"])
+            str(info["sha256"])
+        int(model.get("minimum_selector_version",
+                      model.get("minimumSelectorVersion", 0)))
+        return True
+    except (KeyError, ValueError, TypeError):
+        return False
+
+
+def normalize_numbers(value):
+    """canonical JSON 정합성 보장: 정수값 float는 int로 강제, 비정수 float는 거부.
+
+    서명측 json.dumps는 2.0을 "2.0"으로 직렬화하지만 클라이언트 검증측은 "2"로
+    정규화(비정수 float는 아예 거부)하므로, float가 하나라도 섞이면 전 기기에서
+    서명 검증이 실패한다. 서명 전에 원천 차단.
+    """
+    if isinstance(value, dict):
+        return {k: normalize_numbers(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [normalize_numbers(v) for v in value]
+    if isinstance(value, float):
+        if value.is_integer():
+            return int(value)
+        raise ValueError(f"manifest에 비정수 float 값 사용 불가: {value!r}")
+    return value
 
 
 def load_master_manifest() -> dict:
     """마스터 manifest 로드 (models_v4.json 우선, 없으면 models.json에서 부트스트랩)"""
+    if not MODELS_JSON_V4.exists() and MODELS_JSON.exists():
+        # models.json은 레거시 파생본(부분집합)이라 v4 전용 모델이 없다 —
+        # 여기서 부트스트랩하면 폴더 재스캔 전까지 카탈로그에서 빠진다.
+        print("주의: models_v4.json 없음 - models.json에서 부트스트랩 "
+              "(v4 전용 모델은 전체 재스캔 전까지 카탈로그에서 빠질 수 있음)")
     for path in (MODELS_JSON_V4, MODELS_JSON):
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
@@ -235,7 +285,8 @@ def load_master_manifest() -> dict:
         "version": 1,
         "updated_at": "",
         "models": [],
-        "key_id": "key_2024_01",
+        # 클라이언트(keys.py MODEL_SIGNING_KEYS)에 등록된 실제 key_id와 일치해야 함
+        "key_id": "key_2025_01",
         "signature": ""
     }
 
@@ -244,11 +295,23 @@ def write_and_sign_manifests(manifest: dict) -> bool:
     """models_v4.json(전체) + models.json(레거시 호환만) 저장 후 각각 서명"""
     import subprocess
 
+    try:
+        manifest = normalize_numbers(manifest)
+    except ValueError as e:
+        print(f"서명 중단: {e}")
+        return False
+
     full_models = manifest.get("models", [])
     legacy_models = [m for m in full_models if is_legacy_compatible(m)]
-    excluded = [m["id"] for m in full_models if not is_legacy_compatible(m)]
+    excluded = [str(m.get("id")) for m in full_models if not is_legacy_compatible(m)]
     if excluded:
-        print(f"models.json(레거시) 제외 - 신형 파일명 사용: {', '.join(excluded)}")
+        print(f"models.json(레거시) 제외 - 신형 파일명/비호환 구조: {', '.join(excluded)}")
+
+    invisible = [str(m.get("id")) for m in full_models
+                 if not set(m.get("files") or {}) <= V4_CLIENT_FILES]
+    if invisible:
+        print(f"경고: v4 클라이언트 allowlist 밖 파일명 - 현재 어떤 셀렉터에도 "
+              f"표시되지 않음: {', '.join(invisible)}")
 
     ok = True
     for path, models in ((MODELS_JSON_V4, full_models), (MODELS_JSON, legacy_models)):
