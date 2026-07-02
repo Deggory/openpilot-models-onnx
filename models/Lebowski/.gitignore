@@ -1,3 +1,0 @@
-# 실제 모델 파일은 GitHub Release(lebowski-v1) 에셋으로 호스팅됨.
-# 1.76GB onnx가 실수로 git에 추가되면 GitHub 100MB 제한으로 push가 전부 실패하므로 차단.
-*.onnx
