@@ -54,6 +54,19 @@
       "added_at": "2025-12-21"
     },
     {
+      "id": "Divided Rl",
+      "name": "Divided Rl",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Divided Rl",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96599486,
+          "sha256": "f92d8c34cfb850bd7896ec5ee8f72f5569350fdbec97ffab9c9c62553448937f"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
+    },
+    {
       "id": "Fly By Wire",
       "name": "Fly By Wire",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Fly By Wire",
@@ -71,6 +84,19 @@
       "added_at": "2025-09-05"
     },
     {
+      "id": "Full RL",
+      "name": "Full RL",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Full RL",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96603003,
+          "sha256": "cca4ac8872e8371b80eaf51c35ea08bd11fca03dc8a414112ad5c3b145890d55"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
+    },
+    {
       "id": "Giga",
       "name": "Giga",
       "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/giga",
@@ -86,6 +112,19 @@
         "driving_vision.onnx": {
           "size": 122086874,
           "sha256": "48f12ce53c55d435b3eac38cca3afe5b131d7a38ab1de176500b050228bb8194"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
+    },
+    {
+      "id": "Lebowski",
+      "name": "Lebowski",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Lebowski",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 60881999,
+          "sha256": "659727c4d4839adc4992a254409a54259a8756a743f2d567bf5fdc6579f8009b"
         }
       },
       "minimum_selector_version": 4,
@@ -732,6 +771,19 @@
       "added_at": "2025-10-21"
     },
     {
+      "id": "Toby Rl",
+      "name": "Toby Rl",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Toby Rl",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96599486,
+          "sha256": "09e29ea64922706ce892882155fba53894715fe2aa743b59c539e3f8984a50fa"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
+    },
+    {
       "id": "WMIv10",
       "name": "WMIv10",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/WMIv10",
@@ -1017,5 +1069,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "ZH8tJ8aXdXVhF0a0eNTp8TxXwg3MGuHI2M+fK5dZ3aTxGn/cGsoRu/TsCybNg6OLt9YdP7rsfGdZ/NcB56d2Dw=="
+  "signature": "g6ewmzcjYjhoPgZo8FJozUKrH33Yf+btJOmgZg/qa8WQbKzxEM9D9jEeyDM05wG4vUL6jS8NhT6gg0utj0gKCg=="
 }

@@ -93,7 +93,8 @@ git add . && git commit -m "feat: my-model 추가" && git push
 
 ```
 openpilot-models/
-├── models.json            # Model metadata + signature
+├── models_v4.json         # 전체 카탈로그 (v4+ 셀렉터용, 마스터) + signature
+├── models.json            # 레거시 파일명 모델만 (v3 이하 셀렉터용, 파생본) + signature
 ├── docs/
 │   └── USAGE.md           # 상세 사용 가이드
 ├── scripts/
@@ -107,6 +108,22 @@ openpilot-models/
         ├── driving_policy.onnx
         └── driving_vision.onnx
 ```
+
+## Manifest 이중화 (중요)
+
+구버전(v3 이하) 셀렉터의 manifest 파서는 `minimum_selector_version` 게이트 **이전에**
+파일명 allowlist를 검사하고, 미지의 파일명이 항목 하나에라도 있으면 목록 전체를
+실패시킨다. 따라서:
+
+- **models.json**: v3 이하 구버전용으로 동결. 레거시 파일명
+  (`driving_vision/policy/on_policy/off_policy.onnx`)만 쓰는 모델만 포함.
+  **신형 파일명(`driving_supercombo.onnx` 등)이 든 항목을 절대 넣지 말 것** —
+  넣는 순간 구버전 사용자 전원의 모델 리스트가 깨진다.
+- **models_v4.json**: 마스터 전체 카탈로그. v4 이상 셀렉터가 이 파일을 읽는다
+  (v4부터는 미지 항목을 스킵하는 관용 파서라 이후 버전 추가에도 안전).
+
+`scripts/update_models.py`가 두 파일을 자동 분리 생성·서명하므로 직접 편집하지 말고
+스크립트를 사용할 것. manifest 항목만 고친 경우 `--resign-only`로 재생성한다.
 
 ## Security
 

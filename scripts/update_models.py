@@ -9,7 +9,12 @@
      - experimental_v1/driving_vision.onnx
   3. 스크립트 실행: python scripts/update_models.py
   4. 프롬프트에서 모델 이름/설명 입력
-  5. 자동으로 models.json 업데이트 + 서명
+  5. 자동으로 manifest 업데이트 + 서명
+     - models_v4.json: 전체 카탈로그 (v4+ 셀렉터용, 마스터)
+     - models.json:    레거시 파일명 모델만 (v3 이하 구버전용, 파생본)
+
+  폴더 스캔 없이 manifest만 재생성/재서명하려면:
+     python scripts/update_models.py --resign-only
 """
 
 import hashlib
@@ -27,8 +32,22 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).parent.parent
 MODELS_DIR = ROOT_DIR / "models"
 MODELS_JSON = ROOT_DIR / "models.json"
+MODELS_JSON_V4 = ROOT_DIR / "models_v4.json"
 README_FILE = ROOT_DIR / "README.md"
 GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models"
+
+# v3 이하 구버전 셀렉터가 아는 파일명 목록.
+# 구버전 manifest 파서는 버전 게이트(minimum_selector_version) "이전에" 파일명을
+# 검사하고, 미지의 파일명이 항목 하나에라도 있으면 models.json 전체를 실패시킨다.
+# 따라서 이 목록을 벗어나는 파일(driving_supercombo.onnx 등)을 쓰는 모델은
+# models.json(레거시 manifest, 동결)에서 제외하고 models_v4.json(전체 카탈로그,
+# 마스터)에만 싣는다. minimum_selector_version만으로는 구버전을 보호할 수 없음.
+LEGACY_ALLOWED_FILES = {
+    "driving_vision.onnx",
+    "driving_policy.onnx",
+    "driving_on_policy.onnx",
+    "driving_off_policy.onnx",
+}
 
 # 필수 파일 세트 (폴더 유효성 검사용, 한 세트가 전부 존재하면 유효, | 로 대체 파일 지원)
 REQUIRED_FILE_SETS = [
@@ -201,24 +220,81 @@ def update_readme(models: list):
     print("README.md 업데이트 완료!")
 
 
+def is_legacy_compatible(model: dict) -> bool:
+    """모델의 파일 세트가 구버전(v3 이하) 셀렉터 allowlist 안에 있는지"""
+    return set(model.get("files") or {}) <= LEGACY_ALLOWED_FILES
+
+
+def load_master_manifest() -> dict:
+    """마스터 manifest 로드 (models_v4.json 우선, 없으면 models.json에서 부트스트랩)"""
+    for path in (MODELS_JSON_V4, MODELS_JSON):
+        if path.exists():
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+    return {
+        "version": 1,
+        "updated_at": "",
+        "models": [],
+        "key_id": "key_2024_01",
+        "signature": ""
+    }
+
+
+def write_and_sign_manifests(manifest: dict) -> bool:
+    """models_v4.json(전체) + models.json(레거시 호환만) 저장 후 각각 서명"""
+    import subprocess
+
+    full_models = manifest.get("models", [])
+    legacy_models = [m for m in full_models if is_legacy_compatible(m)]
+    excluded = [m["id"] for m in full_models if not is_legacy_compatible(m)]
+    if excluded:
+        print(f"models.json(레거시) 제외 - 신형 파일명 사용: {', '.join(excluded)}")
+
+    ok = True
+    for path, models in ((MODELS_JSON_V4, full_models), (MODELS_JSON, legacy_models)):
+        doc = dict(manifest)
+        doc["models"] = models
+        doc["signature"] = "NEEDS_SIGNING"
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(doc, f, ensure_ascii=False, indent=2)
+
+        result = subprocess.run(
+            [sys.executable, str(Path(__file__).parent / "sign_manifest.py"), "--sign", str(path)],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            print(f"서명 완료: {path.name} ({len(models)}개 모델)")
+        else:
+            print(f"서명 실패: {path.name}: {result.stderr}")
+            ok = False
+    return ok
+
+
+def resign_only():
+    """폴더 스캔 없이 마스터 manifest에서 두 manifest를 재생성 + 재서명
+
+    manifest 항목을 직접 수정한 뒤(예: minimum_selector_version 차단)나,
+    models.json 단일 구조를 이중 manifest 구조로 전환할 때 사용.
+    """
+    manifest = load_master_manifest()
+    if not manifest.get("models"):
+        print("모델이 없습니다 (models_v4.json / models.json 확인)")
+        sys.exit(1)
+    manifest["updated_at"] = datetime.now(KST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
+    if not write_and_sign_manifests(manifest):
+        sys.exit(1)
+
+
 def update_models_json():
-    """models.json 업데이트"""
+    """manifest(models_v4.json + models.json) 업데이트"""
     print("=" * 50)
     print("모델 폴더 스캔 중...")
     print("=" * 50)
 
-    # 기존 models.json 로드
-    if MODELS_JSON.exists():
-        with open(MODELS_JSON, "r", encoding="utf-8") as f:
-            manifest = json.load(f)
-    else:
-        manifest = {
-            "version": 1,
-            "updated_at": "",
-            "models": [],
-            "key_id": "key_2024_01",
-            "signature": ""
-        }
+    # 기존 manifest 로드 (마스터 우선 — models.json에는 레거시 항목만 있어
+    # supercombo 등 신형 모델의 이름/추가일 정보가 없다)
+    manifest = load_master_manifest()
 
     # 기존 모델을 dict로 변환 (id -> model)
     existing_models = {m["id"]: m for m in manifest.get("models", [])}
@@ -249,29 +325,14 @@ def update_models_json():
     manifest["models"] = new_models
     manifest["updated_at"] = datetime.now(KST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 
-    # 서명 제거 (sign_manifest.py에서 다시 서명)
-    manifest["signature"] = "NEEDS_SIGNING"
-
-    # 저장
-    with open(MODELS_JSON, "w", encoding="utf-8") as f:
-        json.dump(manifest, f, ensure_ascii=False, indent=2)
-
     print("\n" + "=" * 50)
-    print(f"models.json 업데이트 완료! ({len(new_models)}개 모델)")
+    print(f"manifest 업데이트! (전체 {len(new_models)}개 모델)")
     print("=" * 50)
 
-    # 서명 실행
-    print("\n서명 중...")
-    import subprocess
-    result = subprocess.run(
-        [sys.executable, str(Path(__file__).parent / "sign_manifest.py"), "--sign", str(MODELS_JSON)],
-        capture_output=True,
-        text=True
-    )
-    if result.returncode == 0:
-        print("서명 완료!")
-    else:
-        print(f"서명 실패: {result.stderr}")
+    # 저장 + 서명 (서명 실패 시 비정상 종료 — watcher가 push를 중단하도록)
+    print("\n저장 + 서명 중...")
+    if not write_and_sign_manifests(manifest):
+        sys.exit(1)
 
     # README.md 업데이트
     update_readme(new_models)
@@ -286,4 +347,7 @@ def update_models_json():
 
 
 if __name__ == "__main__":
-    update_models_json()
+    if "--resign-only" in sys.argv:
+        resign_only()
+    else:
+        update_models_json()
