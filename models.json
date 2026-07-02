@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-02T17:11:33+09:00",
+  "updated_at": "2026-07-02T17:17:22+09:00",
   "models": [
     {
       "id": "CD210",
@@ -69,6 +69,27 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-09-05"
+    },
+    {
+      "id": "Giga",
+      "name": "Giga",
+      "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
+      "files": {
+        "driving_off_policy.onnx": {
+          "size": 13393365,
+          "sha256": "35e4a5949007ad7de62e6f3af66eab119074e31a77835895e885140f3b98e9a7"
+        },
+        "driving_on_policy.onnx": {
+          "size": 13022642,
+          "sha256": "0712c30feb974ec951e4f3163e786c74c1e2b8f3b9d57d8ee56f4b9ba0d3d0f6"
+        },
+        "driving_vision.onnx": {
+          "size": 122086874,
+          "sha256": "48f12ce53c55d435b3eac38cca3afe5b131d7a38ab1de176500b050228bb8194"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
     },
     {
       "id": "Lebowski",
@@ -928,27 +949,6 @@
       "added_at": "2025-10-22"
     },
     {
-      "id": "needed to compile",
-      "name": "needed to compile",
-      "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
-      "files": {
-        "driving_off_policy.onnx": {
-          "size": 13393365,
-          "sha256": "35e4a5949007ad7de62e6f3af66eab119074e31a77835895e885140f3b98e9a7"
-        },
-        "driving_on_policy.onnx": {
-          "size": 13022642,
-          "sha256": "0712c30feb974ec951e4f3163e786c74c1e2b8f3b9d57d8ee56f4b9ba0d3d0f6"
-        },
-        "driving_vision.onnx": {
-          "size": 122086874,
-          "sha256": "48f12ce53c55d435b3eac38cca3afe5b131d7a38ab1de176500b050228bb8194"
-        }
-      },
-      "minimum_selector_version": 4,
-      "added_at": "2026-07-02"
-    },
-    {
       "id": "op11",
       "name": "op11",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/op11",
@@ -1030,5 +1030,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "FCgoA9+l/dSnNAUZdy61jWEX6t28t6u3FeTaVLEVkx1RBuyyz5ALRWcvhpWbJlk9D7i7xNudIxqnuT91AnanDA=="
+  "signature": "4xes1gOLS6uox3sPuTqa0cUhrS1GZmRi+piWgeZN7C/RWpR81a/jk8JqGM3QcFF+9QrdxOpj6FnJ1Io75h64CA=="
 }

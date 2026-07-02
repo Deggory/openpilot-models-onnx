@@ -1,5 +1,5 @@
 {
-  "name": "needed to compile",
+  "name": "Giga",
   "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
   "files": {
     "driving_off_policy.onnx": {
