@@ -1,6 +1,6 @@
 {
   "name": "Giga",
-  "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
+  "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/giga",
   "files": {
     "driving_off_policy.onnx": {
       "size": 13393365,

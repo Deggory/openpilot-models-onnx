@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-02T17:37:18+09:00",
+  "updated_at": "2026-07-02T17:50:47+09:00",
   "models": [
     {
       "id": "CD210",
@@ -73,7 +73,7 @@
     {
       "id": "Giga",
       "name": "Giga",
-      "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
+      "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/giga",
       "files": {
         "driving_off_policy.onnx": {
           "size": 13393365,
@@ -1030,5 +1030,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "QjO3JtVuKDsKXGL4D2LWjgDMv9Z6OwN0S3SnNqxkhWhP8AmYdu0ZBxPAAbSnPbv+IiftuiqVL1yd/9JpqibNCg=="
+  "signature": "HTAFDmdi2pRZOVTmGYa8D43hW87fW74MaojE9J4r2Qd7ir3/zcewEwkqSFBh/TJJItbhe4YqVcpiFqsSkRFNAA=="
 }
