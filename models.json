@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-05-23T05:47:30+09:00",
+  "updated_at": "2026-07-02T16:30:54+09:00",
   "models": [
     {
       "id": "CD210",
@@ -69,6 +69,19 @@
       },
       "minimum_selector_version": 1,
       "added_at": "2025-09-05"
+    },
+    {
+      "id": "Lebowski",
+      "name": "Lebowski",
+      "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/lebowski-v1",
+      "files": {
+        "big_driving_supercombo.onnx": {
+          "size": 1757355221,
+          "sha256": "a501760a9d1d5fef0eab2b8c5d122d06124fc26dc8e0782e0aa94b82a208f0ff"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-02"
     },
     {
       "id": "MacroStiff",
@@ -996,5 +1009,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "XCyw3/Fy8PxIoNa4bBri0f3vMjlC8KhpC1PFyAMlgI3ihLJcIOPT7wzn8VMlR8fZFgTgkNNNZA1z5+9stM52DQ=="
+  "signature": "1wdYlkpV664fN+lvjEwZO73605EKlBDFLA6qvsF8nApUreuSSzJL8KOvoUU4qbdu4mscCNQflFxJrQEpQFZnCg=="
 }

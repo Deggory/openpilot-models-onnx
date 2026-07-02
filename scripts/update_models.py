@@ -55,6 +55,10 @@ def scan_model_folders() -> list[Path]:
 
     for item in MODELS_DIR.iterdir():
         if item.is_dir():
+            # 외부 호스팅 모델: meta.json이 있으면 실제 onnx 없이도 유효한 모델 폴더
+            if (item / "meta.json").exists():
+                model_folders.append(item)
+                continue
             # 필수 파일 체크 (| 로 대체 파일 지원)
             has_all_files = all(
                 any((item / alt.strip()).exists() for alt in req.split("|"))
@@ -69,6 +73,22 @@ def scan_model_folders() -> list[Path]:
 def get_model_info(folder: Path, existing_models: dict) -> dict:
     """모델 폴더에서 정보 추출"""
     model_id = folder.name
+
+    # 외부 호스팅 모델: GitHub 100MB 제한을 넘는 파일은 Release 등에 올리고
+    # meta.json(name/base_url/files/minimum_selector_version/added_at)으로 등록
+    meta_file = folder / "meta.json"
+    if meta_file.exists():
+        with open(meta_file, "r", encoding="utf-8") as f:
+            meta = json.load(f)
+        print(f"  [{model_id}] 외부 호스팅 모델 (meta.json 사용)")
+        return {
+            "id": model_id,
+            "name": meta.get("name", model_id),
+            "base_url": meta.get("base_url", f"{GITHUB_BASE_URL}/{model_id}"),
+            "files": meta["files"],
+            "minimum_selector_version": meta.get("minimum_selector_version", 1),
+            "added_at": meta.get("added_at", datetime.now(KST).strftime("%Y-%m-%d")),
+        }
 
     # 기존 모델 정보가 있으면 재사용
     existing = existing_models.get(model_id, {})

@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| Lebowski | Lebowski | 1675.9MB | 2026-07-02 |
 | Op model16 deepv6 | Op model16 deepv6 | 92.1MB | 2026-05-23 |
 | Op model16 deepv5 | Op model16 deepv5 | 71.8MB | 2026-05-22 |
 | Op model16 deepv4 | Op model16 deepv4 | 92.1MB | 2026-05-22 |
