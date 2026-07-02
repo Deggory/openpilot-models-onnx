@@ -63,7 +63,7 @@
           "sha256": "f92d8c34cfb850bd7896ec5ee8f72f5569350fdbec97ffab9c9c62553448937f"
         }
       },
-      "minimum_selector_version": 5,
+      "minimum_selector_version": 4,
       "added_at": "2026-07-02"
     },
     {
@@ -93,7 +93,7 @@
           "sha256": "cca4ac8872e8371b80eaf51c35ea08bd11fca03dc8a414112ad5c3b145890d55"
         }
       },
-      "minimum_selector_version": 5,
+      "minimum_selector_version": 4,
       "added_at": "2026-07-02"
     },
     {
@@ -780,7 +780,7 @@
           "sha256": "09e29ea64922706ce892882155fba53894715fe2aa743b59c539e3f8984a50fa"
         }
       },
-      "minimum_selector_version": 5,
+      "minimum_selector_version": 4,
       "added_at": "2026-07-02"
     },
     {
@@ -1069,5 +1069,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "7fcC+Sa/bnHJhchS8mBaULAWckDzxqAnlvvmdDefxqXwk1cuGPU9JxaWQ6hHYXH4RR7ExsXo1lFBRoRlcU2VDA=="
+  "signature": "Fu7L6HJVau8GeDf2a3fFk2trIjeaJ7WCt8R68DLeR9AOUb9RaowXIHUZdaOJovkLjMUyju/yx6H6QKu3HSL1Bw=="
 }
