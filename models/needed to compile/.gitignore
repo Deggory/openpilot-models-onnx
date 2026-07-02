@@ -1,0 +1,2 @@
+# 실제 모델 파일은 GitHub Release 에셋으로 호스팅됨 (tag: needed-to-compile)
+*.onnx

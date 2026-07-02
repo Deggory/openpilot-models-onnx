@@ -1,0 +1,25 @@
+{
+  "name": "needed to compile",
+  "base_url": "https://github.com/happymaj11r/openpilot-models/releases/download/needed-to-compile",
+  "files": {
+    "driving_off_policy.onnx": {
+      "size": 13393365,
+      "sha256": "35e4a5949007ad7de62e6f3af66eab119074e31a77835895e885140f3b98e9a7"
+    },
+    "driving_on_policy.onnx": {
+      "size": 13022642,
+      "sha256": "0712c30feb974ec951e4f3163e786c74c1e2b8f3b9d57d8ee56f4b9ba0d3d0f6"
+    },
+    "driving_vision.onnx": {
+      "size": 122086874,
+      "sha256": "48f12ce53c55d435b3eac38cca3afe5b131d7a38ab1de176500b050228bb8194"
+    }
+  },
+  "minimum_selector_version": 4,
+  "added_at": "2026-07-02",
+  "source": {
+    "branch": "giga_model",
+    "pr_number": null,
+    "pr_title": null
+  }
+}

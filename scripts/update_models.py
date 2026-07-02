@@ -30,11 +30,17 @@ MODELS_JSON = ROOT_DIR / "models.json"
 README_FILE = ROOT_DIR / "README.md"
 GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models"
 
-# 필수 파일 (폴더 유효성 검사용, | 로 대체 파일 지원)
-REQUIRED_FILES = ["driving_policy.onnx|driving_on_policy.onnx", "driving_vision.onnx"]
+# 필수 파일 세트 (폴더 유효성 검사용, 한 세트가 전부 존재하면 유효, | 로 대체 파일 지원)
+REQUIRED_FILE_SETS = [
+    # 구 구조: vision + policy 분리형
+    ["driving_policy.onnx|driving_on_policy.onnx", "driving_vision.onnx"],
+    # 신 구조: 단일 통합 supercombo (2026-06 이후)
+    ["big_driving_supercombo.onnx|driving_supercombo.onnx"],
+]
 
 # 제외 패턴 (파일명에 포함되면 등록 제외)
-EXCLUDE_PATTERNS = ["dmonitoring", "big"]
+# 주의: big_driving_supercombo.onnx는 신형 정식 모델이므로 "big" 전체 제외 금지
+EXCLUDE_PATTERNS = ["dmonitoring", "big_driving_vision", "big_driving_policy"]
 
 
 def calculate_sha256(filepath: Path) -> str:
@@ -59,12 +65,15 @@ def scan_model_folders() -> list[Path]:
             if (item / "meta.json").exists():
                 model_folders.append(item)
                 continue
-            # 필수 파일 체크 (| 로 대체 파일 지원)
-            has_all_files = all(
-                any((item / alt.strip()).exists() for alt in req.split("|"))
-                for req in REQUIRED_FILES
+            # 필수 파일 세트 체크 (한 세트라도 전부 존재하면 유효, | 로 대체 파일 지원)
+            has_valid_set = any(
+                all(
+                    any((item / alt.strip()).exists() for alt in req.split("|"))
+                    for req in file_set
+                )
+                for file_set in REQUIRED_FILE_SETS
             )
-            if has_all_files:
+            if has_valid_set:
                 model_folders.append(item)
 
     return model_folders
