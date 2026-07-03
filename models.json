@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-03T17:44:14+09:00",
+  "updated_at": "2026-07-03T20:51:17+09:00",
   "models": [
     {
       "id": "CD210",
@@ -88,7 +88,7 @@
           "sha256": "48f12ce53c55d435b3eac38cca3afe5b131d7a38ab1de176500b050228bb8194"
         }
       },
-      "minimum_selector_version": 4,
+      "minimum_selector_version": 99,
       "added_at": "2026-07-02"
     },
     {
@@ -1017,5 +1017,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "3W48MN+bQhms8+ZbjHlOxXd3T7JulRVENqu9bgYwzMB+S1uLn8Njhfu2wX1FsX44z20YKpP6accVpFb3J1hDAg=="
+  "signature": "iNZr5+KwOimUggiI8cqVCLOa6cey2MLTJ+XYK49lz1WdXW0cYEW7RLjy/GrjsEhmHOR7cwjfBH9nviuF6js6BA=="
 }
