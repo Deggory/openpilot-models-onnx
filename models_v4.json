@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-03T20:51:17+09:00",
+  "updated_at": "2026-07-03T22:34:28+09:00",
   "models": [
     {
       "id": "CD210",
@@ -128,7 +128,7 @@
         }
       },
       "minimum_selector_version": 4,
-      "added_at": "2026-07-02"
+      "added_at": "2026-06-30"
     },
     {
       "id": "MacroStiff",
@@ -781,7 +781,7 @@
         }
       },
       "minimum_selector_version": 4,
-      "added_at": "2026-07-02"
+      "added_at": "2026-06-29"
     },
     {
       "id": "WMIv10",
@@ -1069,5 +1069,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "2E/o5y7lhVxkJhVX9he7Vj/Y1zjRLPhqbqXGVA3esIUD7+Wfs3YF7JUrRh7PCvXRQQmPq5zzhOSZoUogB398Dg=="
+  "signature": "bSGJ08EzUG6/kJOCSSuGPX1SKQTjbdY83w8eITHocc/AwAAe7gyUI8zNDFJheyz2ctO3hstyZiOeiq5SJHBpCg=="
 }
