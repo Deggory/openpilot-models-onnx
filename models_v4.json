@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-03T22:34:28+09:00",
+  "updated_at": "2026-07-06T11:46:38+09:00",
   "models": [
     {
       "id": "CD210",
@@ -65,6 +65,19 @@
       },
       "minimum_selector_version": 4,
       "added_at": "2026-07-02"
+    },
+    {
+      "id": "Divided Rlv2",
+      "name": "Divided Rlv2",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Divided Rlv2",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96599486,
+          "sha256": "586d649d8aa4f1cd171c83455ee3c893f96d5ca84376c32a7453a5fca4354d75"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-06"
     },
     {
       "id": "Fly By Wire",
@@ -1069,5 +1082,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "bSGJ08EzUG6/kJOCSSuGPX1SKQTjbdY83w8eITHocc/AwAAe7gyUI8zNDFJheyz2ctO3hstyZiOeiq5SJHBpCg=="
+  "signature": "WmYgGCjwXPc/E+tPTijy0/r+oYKE5vw7JJk89kjArJfDLURURoF/pcm3XGrXZkPi7IHF5fHXvWHH3Ggxq14vBg=="
 }
