@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-07T01:16:39+09:00",
+  "updated_at": "2026-07-09T09:16:35+09:00",
   "models": [
     {
       "id": "CD210",
@@ -121,6 +121,19 @@
       },
       "minimum_selector_version": 4,
       "added_at": "2026-07-02"
+    },
+    {
+      "id": "Full RLv8",
+      "name": "Full RLv8",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Full RLv8",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96600448,
+          "sha256": "bc3a1118cb7ffd603207c1b426995e4b3b36959bed6f0189e42c43e02dde39d7"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-09"
     },
     {
       "id": "Giga",
@@ -1095,5 +1108,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "y5l+BmYrDLuEGFxznNN1aH2430PzwQKLaiTFu5z9LbFh3HNIyHz57SYt+mHOOsxM3hofczulwGOj395KmDRoDQ=="
+  "signature": "zyY11H1ZSDjpjD/X07QULCBJL/Ute6O0RWKm0xo93OM+ZJUyoAF3/EvqaKZN94KmSOtGEREX5sbVLh07S7h0Cg=="
 }
