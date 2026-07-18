@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-18T02:16:47+09:00",
+  "updated_at": "2026-07-19T03:46:43+09:00",
   "models": [
     {
       "id": "CD210",
@@ -224,6 +224,19 @@
       },
       "minimum_selector_version": 4,
       "added_at": "2026-07-18"
+    },
+    {
+      "id": "Michael Rlv2",
+      "name": "Michael Rlv2",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Michael Rlv2",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96599486,
+          "sha256": "278b8ce2657011c54403459102ba742af407aafe239fff8392131977d128f842"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-07-19"
     },
     {
       "id": "Neurips",
@@ -1147,5 +1160,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "NGaK8vlB5R/H9cKsutEjC0EwJdDefvVyRSxt821+1tRaUow2Ty4F3SLj8hp9FrFm7CpmfrvgIJ1PYidihkKWAw=="
+  "signature": "vAFUE7zGXfm5BRd7heWolvJKnPS98EvfYZsgcYBQzheMk612YjYn7H8yDTHxzNxBN+kSYP0bvD0iRr2jZRkCBQ=="
 }
