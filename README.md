@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| Full RLv11 | Full RLv11 | 92.1MB | 2026-07-23 |
 | Michael Rlv2 | Michael Rlv2 | 92.1MB | 2026-07-19 |
 | Michael Rl | Michael Rl | 92.1MB | 2026-07-18 |
 | Full RLv10 | Full RLv10 | 92.1MB | 2026-07-14 |
