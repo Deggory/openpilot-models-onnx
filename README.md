@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| BRH | BRH | 92.1MB | 2026-07-31 |
 | Rebellious Hope | Rebellious Hope | 92.1MB | 2026-07-28 |
 | Full RLv11 | Full RLv11 | 92.1MB | 2026-07-23 |
 | Michael Rlv2 | Michael Rlv2 | 92.1MB | 2026-07-19 |
