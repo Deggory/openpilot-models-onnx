@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| RDFv3 | RDFv3 | 92.2MB | 2026-08-10 |
 | RDFv2 | RDFv2 | 92.1MB | 2026-08-10 |
 | RDF | RDF | 92.1MB | 2026-08-06 |
 | Revert "Rebellious Hope | Revert "Rebellious Hope | 58.1MB | 2026-08-05 |
