@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T00:46:45+09:00",
+  "updated_at": "2026-08-12T06:16:47+09:00",
   "models": [
     {
       "id": "BRH",
@@ -919,6 +919,19 @@
       "added_at": "2026-08-12"
     },
     {
+      "id": "RDFv6",
+      "name": "RDFv6",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/RDFv6",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96635310,
+          "sha256": "c7db331ca0d4f1e185ee463f19c8f3ceca3e7eb1ccd58a35e348844b710dd0cd"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-08-12"
+    },
+    {
       "id": "Rebellious Hope",
       "name": "Rebellious Hope",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Rebellious Hope",
@@ -1277,5 +1290,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "NqivA5Ra5Bd2gVfvHW3uHmFLvWUgGmgq/99ooJi9WaG8hTv0P9weU2N+cgPqDNAcX11ILcYhrifuPKFYXY2wBA=="
+  "signature": "EpDOWElC87nGzo2r1edu+nww0FIIRaxD1nRQGnbp4LZnidtAA+DWvLQ/ZG+ryWXVQ4Ld0ubLYnp6WbolR8LyDA=="
 }
