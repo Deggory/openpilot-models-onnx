@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T06:16:47+09:00",
+  "updated_at": "2026-08-13T20:46:49+09:00",
   "models": [
     {
       "id": "BRH",
@@ -975,6 +975,19 @@
       "added_at": "2026-01-09"
     },
     {
+      "id": "Terrific Super Fantastic",
+      "name": "Terrific Super Fantastic",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Terrific Super Fantastic",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96635310,
+          "sha256": "af15b1c9bf535d440a17f255fc1b58b2f5b7331bdc1c5c50cc02242cde6d788e"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-08-13"
+    },
+    {
       "id": "The-Cool-peoples-v3",
       "name": "TCPv3",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/The-Cool-peoples-v3",
@@ -1290,5 +1303,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "EpDOWElC87nGzo2r1edu+nww0FIIRaxD1nRQGnbp4LZnidtAA+DWvLQ/ZG+ryWXVQ4Ld0ubLYnp6WbolR8LyDA=="
+  "signature": "2wkMh0y7KLBI8D7DOb7y6410kQADh+/SFLREEFpobm2h+4JDJE2VU1sR6TcYGtexUyVfUAAvIFvNSJSNpfF2AQ=="
 }
