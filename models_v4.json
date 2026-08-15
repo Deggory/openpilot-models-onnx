@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-15T16:22:01+09:00",
+  "updated_at": "2026-08-16T07:43:37+09:00",
   "models": [
     {
       "id": "BRH",
@@ -975,6 +975,19 @@
       "added_at": "2026-01-09"
     },
     {
+      "id": "TSFDO",
+      "name": "TSFDO",
+      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/TSFDO",
+      "files": {
+        "driving_supercombo.onnx": {
+          "size": 96635310,
+          "sha256": "baa30b01cc980a2e616bca5c94f64b64cccce5acfd2456c48bd29da274f4d78b"
+        }
+      },
+      "minimum_selector_version": 4,
+      "added_at": "2026-08-16"
+    },
+    {
       "id": "Terrific Super Fantastic",
       "name": "Terrific Super Fantastic",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Terrific Super Fantastic",
@@ -1303,5 +1316,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "XJWNjsNha2GIzYkumg1DtyvNYlmERA64ECie/bO5bVkzLY3GWgTYUGKiaUNjj+xqKzoQ/j+hEMCLw+BzQrFCBw=="
+  "signature": "9Bg2W9CenC9dI+xZL2VDWiEuJE/U5ZHP6TuJpee9vhJ7OMaKELfa/W4tXntUCtrY06SfwDoyg/vtGxc37L2aAQ=="
 }
