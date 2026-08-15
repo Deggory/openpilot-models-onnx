@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T20:46:49+09:00",
+  "updated_at": "2026-08-15T16:22:01+09:00",
   "models": [
     {
       "id": "BRH",
@@ -1303,5 +1303,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "2wkMh0y7KLBI8D7DOb7y6410kQADh+/SFLREEFpobm2h+4JDJE2VU1sR6TcYGtexUyVfUAAvIFvNSJSNpfF2AQ=="
+  "signature": "XJWNjsNha2GIzYkumg1DtyvNYlmERA64ECie/bO5bVkzLY3GWgTYUGKiaUNjj+xqKzoQ/j+hEMCLw+BzQrFCBw=="
 }
