@@ -12,6 +12,7 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
+| TTv2 | TTv2 | 58.1MB | 2026-08-18 |
 | TT | TT | 58.1MB | 2026-08-17 |
 | TSFDO | TSFDO | 92.2MB | 2026-08-16 |
 | Terrific Super Fantastic | Terrific Super Fantastic | 92.2MB | 2026-08-13 |
