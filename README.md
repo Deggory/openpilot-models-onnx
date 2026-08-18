@@ -12,8 +12,6 @@ Custom driving models for openpilot (carrot fork).
 
 | ID | Name | Size | Added |
 |----|------|------|-------|
-| TTv2 | TTv2 | 58.1MB | 2026-08-18 |
-| TT | TT | 58.1MB | 2026-08-17 |
 | TSFDO | TSFDO | 92.2MB | 2026-08-16 |
 | Terrific Super Fantastic | Terrific Super Fantastic | 92.2MB | 2026-08-13 |
 | RDFv6 | RDFv6 | 92.2MB | 2026-08-12 |
@@ -90,6 +88,16 @@ Custom driving models for openpilot (carrot fork).
 | The-Cool-peoples-v3 | TCPv3 | 57.4MB | 2025-10-21 |
 | Nuggets In Dijon | Nuggets In Dijon | 55.9MB | 2025-10-10 |
 | Fly By Wire | Fly By Wire | 44.9MB | 2025-09-05 |
+
+## Big Models (chestnut/eGPU 전용)
+
+comma usbgpu(chestnut) 전용 `big_driving_supercombo.onnx` (~1.7GB).
+기기 셀렉터 목록과 무관하며, 용량 제한 때문에 GitHub Release로 배포된다.
+
+| Name | Source branch | Size | Added | Download |
+|------|---------------|------|-------|----------|
+| TT Bigv2 | `tt-driving` | 1675.7MB | 2026-08-18 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-4998cd25/big_driving_supercombo.onnx) |
+| TT Big | `tt-driving` | 1675.7MB | 2026-08-18 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-93283d81/big_driving_supercombo.onnx) |
 
 ## 모델 추가 방법
 

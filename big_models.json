@@ -1,0 +1,28 @@
+{
+  "big_models": [
+    {
+      "name": "TT Big",
+      "series_key": "ttbig",
+      "version": 1,
+      "source_branch": "tt-driving",
+      "sha256": "93283d8137bac9cfb5abc18a423f5b9d7b5b20b9c5d332637f96e6863697c323",
+      "size": 1757101555,
+      "tag": "big-tt-driving-93283d81",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-93283d81/big_driving_supercombo.onnx",
+      "added_at": "2026-08-18T08:21:56.041976+09:00",
+      "matched_model": "Lebowski"
+    },
+    {
+      "name": "TT Bigv2",
+      "series_key": "ttbig",
+      "version": 2,
+      "source_branch": "tt-driving",
+      "sha256": "4998cd258725c87233278612bdf04d0f6f600f53a738a48c60e4366273580c88",
+      "size": 1757101084,
+      "tag": "big-tt-driving-4998cd25",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-4998cd25/big_driving_supercombo.onnx",
+      "added_at": "2026-08-18T09:48:49.330214+09:00",
+      "matched_model": "Lebowski"
+    }
+  ]
+}
