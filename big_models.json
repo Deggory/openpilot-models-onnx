@@ -23,6 +23,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-4998cd25/big_driving_supercombo.onnx",
       "added_at": "2026-08-18T09:48:49.330214+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Ttttfbrlm Big",
+      "series_key": "ttttfbrlm-big",
+      "version": 1,
+      "source_branch": "ttttfbrlm",
+      "sha256": "1c90cac0bb2b8f25940b3cca3be41704b90a42857fc9e735b7df1d6983ae2554",
+      "size": 1757101084,
+      "tag": "big-ttttfbrlm-1c90cac0",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-ttttfbrlm-1c90cac0/big_driving_supercombo.onnx",
+      "added_at": "2026-08-19T08:08:19.125810+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
