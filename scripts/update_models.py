@@ -34,6 +34,77 @@ MODELS_DIR = ROOT_DIR / "models"
 MODELS_JSON = ROOT_DIR / "models.json"
 MODELS_JSON_V4 = ROOT_DIR / "models_v4.json"
 README_FILE = ROOT_DIR / "README.md"
+# chestnut(eGPU) 전용 big 모델 릴리스 레지스트리 (watcher가 갱신, 서명 대상 아님)
+BIG_MODELS_FILE = ROOT_DIR / "big_models.json"
+
+
+def load_big_models() -> list:
+    """big_models.json 로드 (없으면 빈 리스트)"""
+    if not BIG_MODELS_FILE.exists():
+        return []
+    try:
+        with open(BIG_MODELS_FILE, encoding="utf-8") as f:
+            return json.load(f).get("big_models", [])
+    except Exception as e:
+        print(f"big_models.json 로드 실패: {e}")
+        return []
+
+
+def update_readme_big(big_models: list):
+    """README.md의 Big Models 섹션 업데이트 (섹션이 없으면 Models 뒤에 삽입)"""
+    if not README_FILE.exists():
+        return
+    if not big_models and "## Big Models" not in README_FILE.read_text(encoding="utf-8"):
+        return
+
+    content = README_FILE.read_text(encoding="utf-8")
+
+    sorted_big = sorted(
+        enumerate(big_models),
+        key=lambda pair: (pair[1].get("added_at", ""), pair[0]),
+        reverse=True,
+    )
+    sorted_big = [m for _, m in sorted_big]
+
+    lines = [
+        "## Big Models (chestnut/eGPU 전용)",
+        "",
+        "comma usbgpu(chestnut) 전용 `big_driving_supercombo.onnx` (~1.7GB).",
+        "기기 셀렉터 목록과 무관하며, 용량 제한 때문에 GitHub Release로 배포된다.",
+        "",
+        "| Name | Source branch | Size | Added | Download |",
+        "|------|---------------|------|-------|----------|",
+    ]
+    for m in sorted_big:
+        size_mb = m.get("size", 0) / (1024 * 1024)
+        added = (m.get("added_at") or "-")[:10]
+        lines.append(
+            f"| {m.get('name', m.get('tag', '?'))} | `{m.get('source_branch', '-')}` "
+            f"| {size_mb:.1f}MB | {added} | [release]({m.get('url', '#')}) |"
+        )
+    lines.append("")
+    block = "\n".join(lines)
+
+    if "## Big Models" in content:
+        new_content = re.sub(
+            r"## Big Models[^\n]*\n.*?(?=\n## )", block, content, flags=re.DOTALL
+        )
+    else:
+        m = re.search(r"## Models\n.*?(?=\n## )", content, flags=re.DOTALL)
+        if m:
+            new_content = content[: m.end()] + "\n" + block + content[m.end():]
+        else:
+            new_content = content.rstrip() + "\n\n" + block + "\n"
+
+    README_FILE.write_text(new_content, encoding="utf-8")
+    print("README.md Big Models 섹션 업데이트 완료!")
+
+
+def readme_only():
+    """폴더 스캔/서명 없이 README(Models + Big Models 섹션)만 재생성"""
+    manifest = load_master_manifest()
+    update_readme(manifest.get("models", []))
+    update_readme_big(load_big_models())
 GITHUB_BASE_URL = "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models"
 
 # v3 이하 구버전 셀렉터가 아는 파일명 목록.
@@ -399,6 +470,7 @@ def update_models_json():
 
     # README.md 업데이트
     update_readme(new_models)
+    update_readme_big(load_big_models())
 
     # 결과 출력
     print("\n" + "=" * 50)
@@ -412,5 +484,7 @@ def update_models_json():
 if __name__ == "__main__":
     if "--resign-only" in sys.argv:
         resign_only()
+    elif "--readme-only" in sys.argv:
+        readme_only()
     else:
         update_models_json()
