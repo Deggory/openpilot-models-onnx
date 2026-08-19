@@ -47,6 +47,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-test-big-model-lfs-a90bd2ff/big_driving_supercombo.onnx",
       "added_at": "2026-08-19T10:08:40.599337+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "TT Big",
+      "series_key": "tt-big",
+      "version": 1,
+      "source_branch": "tt-driving",
+      "sha256": "62345fa8406e318599cb62a8dccc3eb4f7e4cd6750638f2dcf7075c42798cf34",
+      "size": 1757103461,
+      "tag": "big-tt-driving-62345fa8",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-62345fa8/big_driving_supercombo.onnx",
+      "added_at": "2026-08-19T14:41:20.492716+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
