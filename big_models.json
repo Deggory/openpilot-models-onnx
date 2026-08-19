@@ -35,6 +35,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-ttttfbrlm-1c90cac0/big_driving_supercombo.onnx",
       "added_at": "2026-08-19T08:08:19.125810+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Test Big Model Lfs Big",
+      "series_key": "test-big-model-lfs-big",
+      "version": 1,
+      "source_branch": "test-big-model-lfs",
+      "sha256": "a90bd2ff9d26657ddff4d626298f3e2f1d5f73aaa7a88a1d5c76512d195120d1",
+      "size": 94,
+      "tag": "big-test-big-model-lfs-a90bd2ff",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-test-big-model-lfs-a90bd2ff/big_driving_supercombo.onnx",
+      "added_at": "2026-08-19T10:08:40.599337+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
