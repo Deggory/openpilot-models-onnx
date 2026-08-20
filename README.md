@@ -96,6 +96,7 @@ comma usbgpu(chestnut) 전용 `big_driving_supercombo.onnx` (~1.7GB).
 
 | Name | Source branch | Size | Added | Download |
 |------|---------------|------|-------|----------|
+| Remove Avgpool Big | `remove-avgpool` | 1682.7MB | 2026-08-21 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-40f9ee6b/big_driving_supercombo.onnx) |
 | TT Big | `tt-driving` | 1675.7MB | 2026-08-19 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-tt-driving-62345fa8/big_driving_supercombo.onnx) |
 | Test Big Model Lfs Big | `test-big-model-lfs` | 0.0MB | 2026-08-19 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-test-big-model-lfs-a90bd2ff/big_driving_supercombo.onnx) |
 | Ttttfbrlm Big | `ttttfbrlm` | 1675.7MB | 2026-08-19 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-ttttfbrlm-1c90cac0/big_driving_supercombo.onnx) |
