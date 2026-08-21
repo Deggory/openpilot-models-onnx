@@ -83,6 +83,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-57a3bf0c/big_driving_supercombo.onnx",
       "added_at": "2026-08-21T09:12:36.829087+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "I Desire Desirable Desire Big",
+      "series_key": "i-desire-desirable-desire-big",
+      "version": 1,
+      "source_branch": "i-desire-desirable-desire",
+      "sha256": "dcd96339cae7ca50a04377be1edd9574d9cba1cbec5ab91b142d77bd5248d6b9",
+      "size": 1757087312,
+      "tag": "big-i-desire-desirable-desire-dcd96339",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-i-desire-desirable-desire-dcd96339/big_driving_supercombo.onnx",
+      "added_at": "2026-08-22T08:12:27.525497+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
