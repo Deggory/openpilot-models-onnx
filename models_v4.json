@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T08:45:56+09:00",
+  "updated_at": "2026-08-21T12:16:57+09:00",
   "models": [
     {
       "id": "BRH",
@@ -945,19 +945,6 @@
       "added_at": "2026-07-28"
     },
     {
-      "id": "Revert \"Rebellious Hope",
-      "name": "Revert \"Rebellious Hope",
-      "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/Revert \"Rebellious Hope",
-      "files": {
-        "driving_supercombo.onnx": {
-          "size": 60881999,
-          "sha256": "659727c4d4839adc4992a254409a54259a8756a743f2d567bf5fdc6579f8009b"
-        }
-      },
-      "minimum_selector_version": 4,
-      "added_at": "2026-08-05"
-    },
-    {
       "id": "SC",
       "name": "SC",
       "base_url": "https://raw.githubusercontent.com/happymaj11r/openpilot-models/main/models/SC",
@@ -1316,5 +1303,5 @@
     }
   ],
   "key_id": "key_2025_01",
-  "signature": "R1nebOz6Uj2FcuhdgZFyc1/Niwr4ZackoLx1mPV3U4yUn+ucpJ5YhMsP8A46VJjv+FhCfcowlCxnKrTbnRBuDg=="
+  "signature": "CAH6TohmegMGXCbfBC8UDvArwTW25mW2P3qam4t8sfXKp044fhGxe5uCKQrZGX8SDhd3kI/t/vbOc2ApvaSWAQ=="
 }
