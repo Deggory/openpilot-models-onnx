@@ -95,6 +95,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-i-desire-desirable-desire-dcd96339/big_driving_supercombo.onnx",
       "added_at": "2026-08-22T08:12:27.525497+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Happy Birthday Big",
+      "series_key": "happy-birthday-big",
+      "version": 1,
+      "source_branch": "happy-birthday",
+      "sha256": "ae90227c1ba51d325a006e95c7c231c988198864a7b59fd1b62b2cc485d176f3",
+      "size": 1757855836,
+      "tag": "big-happy-birthday-ae90227c",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-happy-birthday-ae90227c/big_driving_supercombo.onnx",
+      "added_at": "2026-08-25T02:42:28.742255+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
