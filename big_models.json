@@ -107,6 +107,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-happy-birthday-ae90227c/big_driving_supercombo.onnx",
       "added_at": "2026-08-25T02:42:28.742255+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Remove Avgpool Bigv3",
+      "series_key": "remove-avgpool-big",
+      "version": 3,
+      "source_branch": "remove-avgpool",
+      "sha256": "6afb28d58bfa7d7639832db8a61ff9209ef704ce1a9de2cdc20dd9004ec42bec",
+      "size": 1757861459,
+      "tag": "big-remove-avgpool-6afb28d5",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-6afb28d5/big_driving_supercombo.onnx",
+      "added_at": "2026-08-25T13:42:30.378524+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
