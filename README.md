@@ -95,6 +95,7 @@ comma usbgpu(chestnut) 전용 `big_driving_supercombo.onnx` (~1.7GB).
 
 | Name | Source branch | Size | Added | Download |
 |------|---------------|------|-------|----------|
+| Remove Avgpool Bigv4 | `remove-avgpool` | 1676.4MB | 2026-08-27 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-9ef28165/big_driving_supercombo.onnx) |
 | Remove Avgpool Bigv3 | `remove-avgpool` | 1676.4MB | 2026-08-25 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-6afb28d5/big_driving_supercombo.onnx) |
 | Happy Birthday Big | `happy-birthday` | 1676.4MB | 2026-08-25 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-happy-birthday-ae90227c/big_driving_supercombo.onnx) |
 | I Desire Desirable Desire Big | `i-desire-desirable-desire` | 1675.7MB | 2026-08-22 | [release](https://github.com/happymaj11r/openpilot-models/releases/download/big-i-desire-desirable-desire-dcd96339/big_driving_supercombo.onnx) |
