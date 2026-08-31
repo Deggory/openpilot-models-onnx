@@ -131,6 +131,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-9ef28165/big_driving_supercombo.onnx",
       "added_at": "2026-08-27T12:12:43.937358+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Remove Avgpool Bigv5",
+      "series_key": "remove-avgpool-big",
+      "version": 5,
+      "source_branch": "remove-avgpool",
+      "sha256": "a086d5249fc308bb73993d1e64630c669d4c7df5bde85f42ad61902543648525",
+      "size": 765953504,
+      "tag": "big-remove-avgpool-a086d524",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-a086d524/big_driving_supercombo.onnx",
+      "added_at": "2026-08-31T10:11:17.153361+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
