@@ -143,6 +143,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-remove-avgpool-a086d524/big_driving_supercombo.onnx",
       "added_at": "2026-08-31T10:11:17.153361+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Tg Contig Big",
+      "series_key": "tg-contig-big",
+      "version": 1,
+      "source_branch": "tg-contig",
+      "sha256": "666565120f8fa3b59a067123f8aca3ae8ad26c3aa7f512eddf85de15fbfb06a1",
+      "size": 765958577,
+      "tag": "big-tg-contig-66656512",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-tg-contig-66656512/big_driving_supercombo.onnx",
+      "added_at": "2026-09-01T12:41:19.106721+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
