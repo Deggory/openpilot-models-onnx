@@ -179,6 +179,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-BMRLNAPv6-f3669cb7/big_driving_supercombo.onnx",
       "added_at": "2026-09-02T07:41:14.327204+09:00",
       "matched_model": "Lebowski"
+    },
+    {
+      "name": "Cinque Big",
+      "series_key": "cinque-big",
+      "version": 1,
+      "source_branch": "cinque-driving",
+      "sha256": "e8d821733be15ebe9e27498bc27ad8bbbd741980ece37d77f377294010b8ff28",
+      "size": 765950064,
+      "tag": "big-cinque-driving-e8d82173",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-cinque-driving-e8d82173/big_driving_supercombo.onnx",
+      "added_at": "2026-09-05T04:09:49.291254+09:00",
+      "matched_model": "Lebowski"
     }
   ]
 }
