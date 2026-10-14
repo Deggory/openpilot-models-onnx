@@ -275,6 +275,18 @@
       "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-nav-model-integration-1d18c42e/big_driving_supercombo.onnx",
       "added_at": "2026-10-13T07:09:50.565655+09:00",
       "matched_model": "Onnx Model Historyv3"
+    },
+    {
+      "name": "VIEW Big",
+      "series_key": "view-big",
+      "version": 1,
+      "source_branch": "view",
+      "sha256": "4ee4e2f93ee88b6103069138a71cab3d74c0a24f17f7ef985c0b721f02ca9379",
+      "size": 836149361,
+      "tag": "big-view-4ee4e2f9",
+      "url": "https://github.com/happymaj11r/openpilot-models/releases/download/big-view-4ee4e2f9/big_driving_supercombo.onnx",
+      "added_at": "2026-10-14T09:11:58.952678+09:00",
+      "matched_model": "Onnx Model Historyv3"
     }
   ]
 }
